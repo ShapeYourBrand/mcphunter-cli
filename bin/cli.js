@@ -5,6 +5,7 @@ import { addCommand } from '../src/commands/add.js';
 import { searchCommand } from '../src/commands/search.js';
 import { stackCommand } from '../src/commands/stack.js';
 import { listCommand } from '../src/commands/list.js';
+import { publishCommand, publishCommandHelp } from '../src/commands/publish.js';
 
 program
   .name('mcphunter')
@@ -33,5 +34,11 @@ program
   .description('List MCP servers installed in your config')
   .option('-c, --client <client>', 'Target client: claude (default), cursor, windsurf, continue', 'claude')
   .action(listCommand);
+
+program
+  .command('publish')
+  .description('Submit an MCP server to mcphunter.com.\n\n' + publishCommandHelp)
+  .option('-f, --file <path>', 'Path to a JSON config (defaults to interactive prompts)')
+  .action(publishCommand);
 
 program.parse();

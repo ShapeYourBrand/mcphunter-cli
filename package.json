@@ -6,18 +6,33 @@
   "bin": {
     "mcphunter": "./bin/cli.js"
   },
-  "files": ["bin/", "src/"],
-  "engines": { "node": ">=18" },
+  "files": [
+    "bin/",
+    "src/"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
-    "commander": "^12.0.0",
     "chalk": "^5.3.0",
+    "commander": "^12.0.0",
     "ora": "^8.0.1"
   },
-  "keywords": ["mcp", "model-context-protocol", "ai", "claude", "cursor", "cli"],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "claude",
+    "cursor",
+    "cli"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/ShapeYourBrand/mcphunter-cli"
   },
-  "homepage": "https://mcphunter.com"
+  "homepage": "https://mcphunter.com",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
 }
